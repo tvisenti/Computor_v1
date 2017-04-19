@@ -2,29 +2,28 @@
 42 - Project #09
 
 Ecrivez un programme qui résout une équation polynomiale de degré inférieur ou e´gal
-à 2. Vous devrez afficher au moins :
-• La forme réduite de l’équation.
-• Le degré de l’équation.
+à 2. Vous devrez afficher au moins :<br>
+• La forme réduite de l’équation.<br>
+• Le degré de l’équation.<br>
 • Sa ou ses solution(s), ainsi que le signe du discriminant quand cela a du sens.
 
 --------------------------------------------------------------------------------
 
 Exemples :
-$>./computor "5 * X^0 + 4 * X^1 - 9.3 * X^2 = 1 * X^0"
-Reduced form: 4 * X^0 + 4 * X^1 - 9.3 * X^2 = 0
-Polynomial degree: 2
-Discriminant is strictly positive, the two solutions are:
-0.905239
--0.475131
-$>./computor "5 * X^0 + 4 * X^1 = 4 * X^0"
-Reduced form: 1 * X^0 + 4 * X^1 = 0
-Polynomial degree: 1
-The solution is:
--0.25
-./computor "8 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 3 * X^0"
-Reduced form: 5 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 0
-Polynomial degree: 3
-The polynomial degree is stricly greater than 2, I can't solve.
+$>./computor "5 * X^0 + 4 * X^1 - 9.3 * X^2 = 1 * X^0"<br>
+Reduced form: 4 * X^0 + 4 * X^1 - 9.3 * X^2 = 0<br>
+Polynomial degree: 2<br>
+Discriminant is strictly positive, the two solutions are:<br>
+0.905239<br>
+-0.475131<br>
+$>./computor "5 * X^0 + 4 * X^1 = 4 * X^0"<br>
+Reduced form: 1 * X^0 + 4 * X^1 = 0<br>
+Polynomial degree: 1<br>
+The solution is: -0.25<br>
+./computor "8 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 3 * X^0"<br>
+Reduced form: 5 * X^0 - 6 * X^1 + 0 * X^2 - 5.6 * X^3 = 0<br>
+Polynomial degree: 3<br>
+The polynomial degree is stricly greater than 2, I can't solve.<br>
 
 --------------------------------------------------------------------------------
 
