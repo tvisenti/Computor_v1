@@ -9,7 +9,7 @@ Ecrivez un programme qui résout une équation polynomiale de degré inférieur 
 
 --------------------------------------------------------------------------------
 
-Exemples :
+Exemples :<br>
 $>./computor "5 * X^0 + 4 * X^1 - 9.3 * X^2 = 1 * X^0"<br>
 Reduced form: 4 * X^0 + 4 * X^1 - 9.3 * X^2 = 0<br>
 Polynomial degree: 2<br>
