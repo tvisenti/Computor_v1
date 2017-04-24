@@ -59,7 +59,10 @@ def factoEqua(array):
 			if spliting[0].find('X') == -1:
 				newArray[power] = addIfExist(newArray[power], spliting[0])
 			else:
-				newArray[power] = addIfExist(newArray[power], spliting[1])
+				if len(spliting) == 1:
+					newArray[power] = addIfExist(newArray[power], 1)
+				else:
+					newArray[power] = addIfExist(newArray[power], spliting[1])
 		index += 1
 	return newArray
 

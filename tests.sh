@@ -81,3 +81,9 @@
 	python computor.py  "42 * X^0 + 4 * X^1 - 16 * X^2 + 41 * X^42 = 21 + 46 * X^1 + 5 * X^2 + 42 * X^42"
 	echo '-----'
 }
+
+{
+	printf "Equa: 42 + 4 * X - X^2 = -21 + 46 * X\n"
+	python computor.py  "42 + 4 * X - X^2 = -21 + 46 * X"
+	echo '-----'
+}
