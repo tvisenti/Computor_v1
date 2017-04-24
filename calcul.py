@@ -35,17 +35,31 @@ def calculDelta(a, b, c):
 	return ((b * b) - (4 * a * c))
 
 def calculComplexNegatif(unrealNb, a, b):
-	a = removeFloatingZero(a * 2)
-	b = removeFloatingZero(b * -1)
+	a *= 2
+	b = (b * -1) / a
+	unrealNb = (my_sqrt(unrealNb))
+
+	a = removeFloatingZero(a)
+	b = removeFloatingZero(b)
 	unrealNb = removeFloatingZero(unrealNb)
-	toPrint = '(' + b + ' - i * sqrt(' + unrealNb + ')) / ' + a
+	if b == '0' or b == '-0':
+		toPrint = '(i * ' + unrealNb + ') / ' + a
+	else:
+		toPrint = b + ' - (i * ' + unrealNb + ' / ' + a + ')'
 	return toPrint
 
 def calculComplexPositif(unrealNb, a, b):
-	a = removeFloatingZero(a * 2)
-	b = removeFloatingZero(b * -1)
+	a *= 2
+	b = (b * -1) / a
+	unrealNb = (my_sqrt(unrealNb))
+
+	a = removeFloatingZero(a)
+	b = removeFloatingZero(b)
 	unrealNb = removeFloatingZero(unrealNb)
-	toPrint = '(' + b + ' + i * sqrt(' + unrealNb + ')) / ' + a
+	if b == '0' or b == '-0':
+		toPrint = '(i * ' + unrealNb + ') / ' + a
+	else:
+		toPrint = b + ' + (i * ' + unrealNb + ' / ' + a + ')'
 	return toPrint
 
 def calculZero(a, b):
