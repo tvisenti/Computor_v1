@@ -39,3 +39,15 @@
 	python computor.py  "5 * X^2 = 5 * X^2"
 	echo '-----'
 }
+
+{
+	printf "Equa: -2 * X^0 + 43 * X^1 - 9.3 * X^2 + 12 * X^0 - 45 * X^1 = 0\n"
+	python computor.py  "-2 * X^0 + 43 * X^1 - 9.3 * X^2 + 12 * X^0 - 45 * X^1 = 0"
+	echo '-----'
+}
+
+{
+	printf "Equa: 4 * X^2 - 9 * X^2 = 123\n"
+	python computor.py  "4 * X^2 - 9 * X^2 = 123"
+	echo '-----'
+}

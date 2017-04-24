@@ -21,8 +21,8 @@ def solverSecondDegree(equa):
 		print calculZero(equa[2], equa[1])
 	else:
 		print 'Discriminant is strictly positive, the two solutions are:'
-		print calculSupPositive(delta, equa[2], equa[1])
-		print calculSupNegative(delta, equa[2], equa[1])
+		print ("%.6f" % calculSupNegative(delta, equa[2], equa[1]))
+		print ("%.6f" % calculSupPositive(delta, equa[2], equa[1]))
 
 def calculDelta(a, b, c):
 	return ((b * b) - (4 * a * c))
@@ -31,7 +31,18 @@ def calculZero(a, b):
 	return (b / (2 * a)) * -1
 
 def calculSupPositive(delta, a, b):
-	return 0
+	sqrt = my_sqrt(delta)
+	return (((b * -1) + sqrt) / (2 * a))
 
 def calculSupNegative(delta, a, b):
-	return 0
+	sqrt = my_sqrt(delta)
+	return (((b * -1) - sqrt) / (2 * a))
+
+def my_sqrt(number):
+	error = 0.0001
+	s = number
+
+	while (error < (s - number / s)):
+		s = ((s + number / s) / 2)
+
+	return s

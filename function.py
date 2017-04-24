@@ -45,22 +45,21 @@ def factoEqua(array):
 		tmpStr = array[index].replace(' ', '')
 		if (tmpStr.find('X') == -1):
 			subIndex = len(tmpStr)
-			power = 0
-			spliting[0] = tmpStr
-		elif (tmpStr.find('X^') == -1):
-			subIndex = tmpStr.find('X') + 1
-			power = 1
-			spliting = tmpStr.split('*')
+			spliting = tmpStr
+			newArray[0] = addIfExist(newArray[0], spliting)
 		else:
-			subIndex = tmpStr.find('X^') + 2
-			power = int(tmpStr[subIndex:])
-			spliting = tmpStr.split('*')
-		if spliting[0].find('X') == -1:
-			newArray[power] = addIfExist(newArray[power], spliting[0])
-		else:
-			newArray[power] = addIfExist(newArray[power], spliting[1])
-			if spliting[0].find('-') == 0:
-				newArray[power] *= -1
+			if (tmpStr.find('X^') == -1):
+				subIndex = tmpStr.find('X') + 1
+				power = 1
+				spliting = tmpStr.split('*')
+			else:
+				subIndex = tmpStr.find('X^') + 2
+				power = int(tmpStr[subIndex:])
+				spliting = tmpStr.split('*')
+			if spliting[0].find('X') == -1:
+				newArray[power] = addIfExist(newArray[power], spliting[0])
+			else:
+				newArray[power] = addIfExist(newArray[power], spliting[1])
 		index += 1
 	return newArray
 
